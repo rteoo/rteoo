@@ -17,7 +17,7 @@ A maioria dos meus projetos públicos são aplicativos para Windows e biblioteca
 - ⌨️ **[SnipType](https://github.com/rteoo/sniptype)** — Expanda atalhos em texto, conteúdo formatado e formulários. Um expansor de texto local. Feito em Python para Windows.
 - 🎙️ **[SnipVoice](https://github.com/rteoo/snipvoice)** — Ditado com transcrição PT-BR/EN-US usando modelos locais e gravação de reuniões. Feito em Python para Windows.
 - 📸 **[SnipScreen](https://github.com/rteoo/snipscreen)** — Capturas de tela, anotações e gravação de tela em MP4 com áudio do sistema e do microfone. Feito em Rust para Windows.
-- 🧮 **[rpn-calc](https://github.com/rteoo/rpn-calc)** — Uma calculadora RPN. Feito em Python para Windows.
+- 🧮 **[RPN Calc](https://github.com/rteoo/rpn-calc)** — Uma calculadora RPN. Feito em Python para Windows.
 
 ## Libs Python
 
