@@ -38,6 +38,7 @@ Bibliotecas pequenas para levar dados oficiais aos seus scripts e aplicativos.
 - 📬 **[outlook-pst](https://github.com/rteoo/outlook-pst)** — CLI em Python e Plugin para ChatGPT e Claude. Pesquise e-mails em arquivos locais no Outlook clássico.
 - 🐂 **[cattle-auction](https://github.com/rteoo/cattle-auction)** — Transforme vídeos de leilões de gado brasileiros em dados estruturados de lotes usando transcrição, OCR e LLMs.
 - 🧮 **[rpn-calc](https://github.com/rteoo/rpn-calc)** — Uma calculadora RPN. Feito em Python para Windows.
+- 🔊 **[rteoo/audio-tray](https://github.com/rteoo/audio-tray)** — Fork from: *[tobi/AudioPriorityBar](https://github.com/tobi/AudioPriorityBar)*, Windows version for system tray app for managing audio device priorities.
 - 🎨 **[design-system-t3code](https://github.com/rteoo/design-system-t3code)** — Um design system baseado no tema padrão do aplicativo T3 Code. Sem vínculo com o T3 Code.
 
 ## Contribuições
@@ -47,7 +48,7 @@ Bibliotecas pequenas para levar dados oficiais aos seus scripts e aplicativos.
 - **[openclaw/clawdex](https://github.com/openclaw/clawdex)** — Catálogo local de contatos para agentes de IA.
 - **[openclaw/discrawl](https://github.com/openclaw/discrawl)** — CLI para Discord com armazenamento local em SQLite.
 - **[tobi/disktree](https://github.com/tobi/disktree)** — Visualizador de uso do disco em mapa de árvore, feito em Rust e GPUI para Omarchy.
-- **[rteoo/audio-tray](https://github.com/rteoo/audio-tray)** — Fork from: *[tobi/AudioPriorityBar](https://github.com/tobi/AudioPriorityBar)*, Windows version for system tray app for managing audio device priorities.
+
 <!-- CONTRIBUTIONS:END -->
 
 ## Atividade no GitHub
