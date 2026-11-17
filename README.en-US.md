@@ -39,6 +39,10 @@ Small clients for getting official data into scripts and applications.
 - 🧮 **[rpn-calc](https://github.com/rteoo/rpn-calc)** — An RPN calculator.
 - 🎨 **[design-system-t3code](https://github.com/rteoo/design-system-t3code)** — A design system based on the T3 Code app's default theme. Unaffiliated with T3 Code.
 
+## GitHub activity
+
+[![GitHub contribution graph for rteoo](https://gitlyy.vercel.app/api/contribution?username=rteoo&hide_border=true)](https://github.com/rteoo?tab=overview)
+
 ## Around the web
 
 [Website](https://rteoo.github.io/) · [X / @rteoox](https://x.com/rteoox) · [All repositories](https://github.com/rteoo?tab=repositories)

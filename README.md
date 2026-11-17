@@ -39,6 +39,10 @@ Bibliotecas pequenas para levar dados oficiais aos seus scripts e aplicativos.
 - 🧮 **[rpn-calc](https://github.com/rteoo/rpn-calc)** — Uma calculadora RPN.
 - 🎨 **[design-system-t3code](https://github.com/rteoo/design-system-t3code)** — Um design system baseado no tema padrão do aplicativo T3 Code. Sem vínculo com o T3 Code.
 
+## Atividade no GitHub
+
+[![Gráfico de contribuições no GitHub de rteoo](https://gitlyy.vercel.app/api/contribution?username=rteoo&hide_border=true)](https://github.com/rteoo?tab=overview)
+
 ## Na web
 
 [Site](https://rteoo.github.io/) · [X / @rteoox](https://x.com/rteoox) · [Todos os repositórios](https://github.com/rteoo?tab=repositories)
