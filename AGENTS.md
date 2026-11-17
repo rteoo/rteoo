@@ -10,7 +10,7 @@ This is the public GitHub profile repository for `rteoo`. The root `README.md` a
 
 ## Contributions automation
 
-The user requested automatic updates from merged PRs. The `Update contributions` workflow in this repository may commit and push only the three README files to `rteoo/rteoo` remote `main`, as `github-actions[bot]`, weekly on Sunday at 22:00 America/Sao_Paulo (Monday 01:00 UTC), on manual dispatch, or after updater/workflow changes land on `main`. It replaces only the `CONTRIBUTIONS` marker blocks. This does not authorize other pushes or repository changes.
+The user requested automatic updates from merged PRs. The `Update contributions` workflow in this repository may commit and push only `README.md` and `README.en-US.md` to `rteoo/rteoo` remote `main`, as `github-actions[bot]`, weekly on Sunday at 22:00 America/Sao_Paulo (Monday 01:00 UTC), on manual dispatch, or after updater/workflow changes land on `main`. It replaces only the `CONTRIBUTIONS` marker blocks. This does not authorize other pushes or repository changes.
 
 - Run `python -B -m unittest discover -s scripts -p 'test_*.py' -v` for updater regression coverage.
 - Run `python -B scripts/update_contributions.py` to refresh locally with the existing authenticated `gh` CLI.

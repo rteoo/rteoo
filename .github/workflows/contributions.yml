@@ -36,7 +36,7 @@ jobs:
       - name: Publish changed sections
         run: |
           git diff --check
-          git add README.md README.pt-BR.md README.en-US.md
+          git add README.md README.en-US.md
           if git diff --cached --quiet; then
             echo 'Contributions are already up to date.'
             exit 0

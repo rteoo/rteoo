@@ -76,7 +76,7 @@ class ContributionsTest(unittest.TestCase):
                 (root / name).write_text(original, encoding="utf-8")
             fetch = lambda n: page([item(1)])
             fetch_repo = lambda repo: "A disk usage visualizer."
-            self.assertEqual(update(root, fetch, fetch_repo), 3)
+            self.assertEqual(update(root, fetch, fetch_repo), 2)
             self.assertEqual(update(root, fetch, fetch_repo), 0)
             for name in FILES:
                 (root / name).write_text(original, encoding="utf-8")

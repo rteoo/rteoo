@@ -13,7 +13,7 @@ AUTHOR = "rteoo"
 EXCLUDED_OWNERS = {AUTHOR, "strateo"}
 START = "<!-- CONTRIBUTIONS:START -->"
 END = "<!-- CONTRIBUTIONS:END -->"
-FILES = {"README.md": "pt", "README.pt-BR.md": "pt", "README.en-US.md": "en"}
+FILES = {"README.md": "pt", "README.en-US.md": "en"}
 PT_DESCRIPTIONS = {
     "tobi/disktree": "Visualizador de uso do disco em mapa de árvore, feito em Rust e GPUI para Omarchy.",
     "openclaw/clawdex": "Catálogo local de contatos para agentes de IA.",
