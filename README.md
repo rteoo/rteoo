@@ -33,6 +33,7 @@ Bibliotecas pequenas para levar dados oficiais aos seus scripts e aplicativos.
 
 ## Outros projetos que criei
 
+- 🧾 **[strateo/nfse](https://github.com/strateo/nfse)** — Cliente Python para emissão, consulta e cancelamento de NFS-e no Padrão Nacional.
 - 🏠 **[homeassistantpy](https://github.com/rteoo/homeassistantpy)** — Cliente para Home Assistant sem dependências, com REST, WebSocket e ferramentas JSON explícitas para agentes.
 - 📬 **[outlook-pst](https://github.com/rteoo/outlook-pst)** — Pesquise e-mails em arquivos PST/OST locais, exporte evidências e visualize alterações antes de aplicá-las no Outlook clássico. Inclui uma CLI em Python e um plugin de skills.
 - 🐂 **[cattle-auction](https://github.com/rteoo/cattle-auction)** — Transforme vídeos de leilões de gado brasileiros em dados estruturados de lotes usando transcrição, OCR e LLMs.

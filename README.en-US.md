@@ -33,6 +33,7 @@ Small clients for getting official data into scripts and applications.
 
 ## More things I've built
 
+- 🧾 **[strateo/nfse](https://github.com/strateo/nfse)** — A Python client for issuing, querying, and canceling Brazilian service invoices (NFS-e) under the national standard.
 - 🏠 **[homeassistantpy](https://github.com/rteoo/homeassistantpy)** — A dependency-free Home Assistant client with REST, WebSocket, and explicit JSON tools for agents.
 - 📬 **[outlook-pst](https://github.com/rteoo/outlook-pst)** — Search local PST/OST mail, export evidence, and preview changes in Classic Outlook. Includes a Python CLI and skills plugin.
 - 🐂 **[cattle-auction](https://github.com/rteoo/cattle-auction)** — Turn Brazilian cattle-auction videos into structured lot data using transcription, OCR, and LLMs.
