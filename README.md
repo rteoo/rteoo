@@ -48,7 +48,6 @@ Bibliotecas pequenas para levar dados oficiais aos seus scripts e aplicativos.
 - **[openclaw/clawdex](https://github.com/openclaw/clawdex)** — Catálogo local de contatos para agentes de IA.
 - **[openclaw/discrawl](https://github.com/openclaw/discrawl)** — CLI para Discord com armazenamento local em SQLite.
 - **[tobi/disktree](https://github.com/tobi/disktree)** — Visualizador de uso do disco em mapa de árvore, feito em Rust e GPUI para Omarchy.
-
 <!-- CONTRIBUTIONS:END -->
 
 ## Atividade no GitHub

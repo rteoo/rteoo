@@ -2,9 +2,11 @@ from collections import Counter
 from pathlib import Path
 import tempfile
 import unittest
+from types import SimpleNamespace
+from unittest.mock import patch
 
 from update_contributions import (
-    END, FILES, START, collect_contributions, render, replace_section, update,
+    END, FILES, START, collect_contributions, fetch_page, render, replace_section, update,
 )
 
 
@@ -32,10 +34,20 @@ class ContributionsTest(unittest.TestCase):
             with self.subTest(data=data), self.assertRaises(ValueError):
                 collect_contributions(lambda n: data)
 
-    def test_includes_personal_strateo_and_upstream_repositories(self):
-        data = page([item(1, "rteoo/sniptype"), item(2, "strateo/nfse"), item(3)])
+    def test_excludes_personal_strateo_and_personal_forks(self):
+        data = page([item(1, "rteoo/sniptype"), item(2, "strateo/nfse"),
+                     item(3, "rteoo/audio-tray"), item(4), item(5, "RTEOO/another")])
         self.assertEqual(collect_contributions(lambda n: data),
-                         Counter({"rteoo/sniptype": 1, "strateo/nfse": 1, "tobi/disktree": 1}))
+                         Counter({"tobi/disktree": 1}))
+
+    def test_search_excludes_owned_repositories(self):
+        with patch("update_contributions.subprocess.run", return_value=SimpleNamespace(
+            returncode=0, stdout='{"items": [], "total_count": 0, "incomplete_results": false}'
+        )) as run:
+            fetch_page(1)
+            query = next(arg for arg in run.call_args.args[0] if arg.startswith("q="))
+            self.assertIn("-user:rteoo", query)
+            self.assertIn("-user:strateo", query)
 
     def test_descriptions_localization_and_safe_markdown(self):
         descriptions = {"tobi/disktree": "A disk usage visualizer.",

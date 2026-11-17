@@ -10,6 +10,7 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 AUTHOR = "rteoo"
+EXCLUDED_OWNERS = {AUTHOR, "strateo"}
 START = "<!-- CONTRIBUTIONS:START -->"
 END = "<!-- CONTRIBUTIONS:END -->"
 FILES = {"README.md": "pt", "README.pt-BR.md": "pt", "README.en-US.md": "en"}
@@ -28,6 +29,7 @@ EN_DESCRIPTIONS = {
 def fetch_page(page):
     query = " ".join([
         f"author:{AUTHOR}", "is:pr", "is:merged", "is:public",
+        *(f"-user:{owner}" for owner in sorted(EXCLUDED_OWNERS)),
     ])
     result = subprocess.run(
         ["gh", "api", "--method", "GET", "search/issues", "-f", f"q={query}",
@@ -71,7 +73,8 @@ def collect_contributions(fetch=fetch_page):
             if identity in seen:
                 raise ValueError("Duplicate PR during pagination; retry the refresh.")
             seen.add(identity)
-            counts[f"{owner}/{name}"] += 1
+            if owner.lower() not in EXCLUDED_OWNERS:
+                counts[f"{owner}/{name}"] += 1
         if len(seen) == total:
             return counts
         if not items or len(seen) > total:
