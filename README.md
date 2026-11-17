@@ -1,10 +1,12 @@
 [🇧🇷 PT-BR](README.md) | [🇺🇸 EN-US](README.en-US.md)
 
-# Oi, eu sou o Teô!
+# Prazer, Teô!
 
-🇧🇷 Engenheiro na **[Strateo](https://github.com/strateo)**. Crio ferramentas para o trabalho do dia a dia: digitar, gravar, trabalhar com dados e automatizar tarefas repetitivas.
+**🇧🇷 Engenheiro, desenvolvendo estratégias com inteligência e processo, que geram resultado [@Strateo](https://strateo.com.br)**. 
 
-A maioria dos meus projetos públicos são aplicativos para Windows e bibliotecas Python. Ferramentas que priorizam a privacidade mantendo os dados locais e usando modelos LLM locais e facilitam a automação com scripts.
+Crio ferramentas para o trabalho do dia a dia: digitar, gravar, trabalhar com dados e automatizar tarefas repetitivas.
+A maioria dos meus projetos públicos são aplicativos para Windows e bibliotecas Python. 
+Ferramentas que priorizam a privacidade mantendo os dados locais e usando modelos LLM locais e facilitam a automação com scripts.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
@@ -21,12 +23,12 @@ A maioria dos meus projetos públicos são aplicativos para Windows e biblioteca
 
 ## Libs Python
 
-Bibliotecas pequenas para levar dados oficiais ou automações aos seus scripts e aplicativos. Todas Disponíveis via PyPi.
+Bibliotecas pequenas para levar dados ou automações aos seus scripts e aplicativos. Todas Disponíveis via PyPi.
 
 - 🏦 **[bcb-data](https://github.com/rteoo/bcb-data)** — Séries temporais econômicas da API SGS do Banco Central do Brasil.
 - 📊 **[ibge-data](https://github.com/rteoo/ibge-data)** — Acesso às APIs oficiais do IBGE.
 - 📑 **[cvmbr-data](https://github.com/rteoo/cvmbr-data)** — Dados abertos da CVM e documentos de companhias disponíveis no RAD/ENET.
-- 🌦️ **[inmet-forecast](https://github.com/rteoo/inmet-forecast)** — Cliente Python não oficial para previsões do INMET.
+- 🌦️ **[inmet-forecast](https://github.com/rteoo/inmet-forecast)** — Cliente Python para previsões do tempo do INMET.
 - 🏠 **[homeassistantpy](https://github.com/rteoo/homeassistantpy)** — Cliente para HomeAssistant sem dependências, com API REST, WebSocket e ferramentas JSON explícitas para agentes.
 
 ## Outros projetos
@@ -46,10 +48,10 @@ Bibliotecas pequenas para levar dados oficiais ou automações aos seus scripts 
 - **[tobi/disktree](https://github.com/tobi/disktree)** — Visualizador de uso do disco em mapa de árvore, feito em Rust e GPUI para Omarchy.
 <!-- CONTRIBUTIONS:END -->
 
+## Links
+
+[Site](https://rteoo.com/) · [X / @rteoox](https://x.com/rteoox) · [Todos os repositórios](https://github.com/rteoo?tab=repositories)
+
 ## Atividade no GitHub
 
 [![Gráfico de contribuições no GitHub de rteoo](https://gitlyy.vercel.app/api/contribution?username=rteoo&hide_border=true)](https://github.com/rteoo?tab=overview)
-
-## Na web
-
-[Site](https://rteoo.com/) · [X / @rteoox](https://x.com/rteoox) · [Todos os repositórios](https://github.com/rteoo?tab=repositories)
