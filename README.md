@@ -1,3 +1,5 @@
+[English](README.md) | [Português brasileiro](README.pt-BR.md)
+
 # Hi, I'm Teô 👋
 
 🇧🇷 Engineer at **Strateo**. I build tools for work I do every day: typing, recording, working with data, and automating the repetitive bits.
@@ -5,8 +7,14 @@
 Most of my public projects are Windows desktop apps and Python libraries. I like tools that keep data local and make useful things easy to script.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-663399?style=flat-square&logo=css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![CLI](https://img.shields.io/badge/CLI-000000?style=flat-square&logo=gnubash&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat-square)
+![macOS](https://img.shields.io/badge/macOS-000000?style=flat-square&logo=apple&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 
 ## Start here
 
