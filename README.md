@@ -1,4 +1,4 @@
-[🇧🇷 Português brasileiro](README.md) | [🇺🇸 English](README.en-US.md)
+[🇧🇷 PT-BR](README.md) | [🇺🇸 EN-US](README.en-US.md)
 
 # Oi, eu sou o Teô!
 
