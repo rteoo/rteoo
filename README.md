@@ -2,9 +2,9 @@
 
 # Oi, eu sou o Teô!
 
-🇧🇷 Engenheiro na **Strateo**. Crio ferramentas para o trabalho do dia a dia: digitar, gravar, trabalhar com dados e automatizar tarefas repetitivas.
+🇧🇷 Engenheiro na **[Strateo](https://github.com/strateo)**. Crio ferramentas para o trabalho do dia a dia: digitar, gravar, trabalhar com dados e automatizar tarefas repetitivas.
 
-A maioria dos meus projetos públicos são aplicativos para Windows e bibliotecas Python. Gosto de ferramentas que mantêm os dados locais e facilitam a automação com scripts.
+A maioria dos meus projetos públicos são aplicativos para Windows e bibliotecas Python. Ferramentas que priorizam a privacidade mantendo os dados locais e usando modelos LLM locais e facilitam a automação com scripts.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
