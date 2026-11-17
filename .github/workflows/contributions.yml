@@ -1,0 +1,46 @@
+name: Update contributions
+
+on:
+  schedule:
+    - cron: '23 9 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/**
+      - .github/workflows/contributions.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-contributions
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.repository == 'rteoo/rteoo'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - name: Check out public profile
+        run: git clone --depth 1 --branch main https://github.com/rteoo/rteoo.git .
+      - name: Test contribution updater
+        run: python3 -m unittest discover -s scripts -p 'test_*.py' -v
+      - name: Refresh public merged contributions
+        run: python3 scripts/update_contributions.py
+      - name: Publish changed sections
+        run: |
+          git diff --check
+          git add README.md README.pt-BR.md README.en-US.md
+          if git diff --cached --quiet; then
+            echo 'Contributions are already up to date.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'docs: refresh merged upstream contributions'
+          git -c 'credential.helper=!gh auth git-credential' push origin HEAD:main

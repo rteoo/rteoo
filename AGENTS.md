@@ -7,3 +7,12 @@ This is the public GitHub profile repository for `rteoo`. The root `README.md` a
 - Keep this repository dependency-free. Use GitHub-compatible Markdown and descriptive link and image text.
 - Before a commit, run `git diff --check` and inspect the complete staged diff. Verify changed project links against GitHub.
 - Use a task branch for changes. The initial scaffold is published as the first commit on remote `main`; later publication requires the user's authorization.
+
+## Contributions automation
+
+The user requested automatic updates from merged PRs. The `Update contributions` workflow in this repository may commit and push only the three README files to `rteoo/rteoo` remote `main`, as `github-actions[bot]`, daily at 09:23 UTC, on manual dispatch, or after updater/workflow changes land on `main`. It replaces only the `CONTRIBUTIONS` marker blocks. This does not authorize other pushes or repository changes.
+
+- Run `python -B -m unittest discover -s scripts -p 'test_*.py' -v` for updater regression coverage.
+- Run `python -B scripts/update_contributions.py` to refresh locally with the existing authenticated `gh` CLI.
+- Include only merged public upstream PRs by `rteoo`; exclude repositories owned by `rteoo` or `strateo`. Keep project counts and PR search links localized in PT-BR and English.
+- Refuse incomplete, inconsistent, empty, or over-1,000-result searches. Beyond the search ceiling, partition by date before refreshing.

@@ -41,10 +41,12 @@ Bibliotecas pequenas para levar dados oficiais aos seus scripts e aplicativos.
 
 ## Contribuições
 
-- 💽 **[DiskTree](https://github.com/tobi/disktree)** — Inclusão do ícone no executável para Windows. [PR #37](https://github.com/tobi/disktree/pull/37).
-- 🗂️ **[Clawdex](https://github.com/openclaw/clawdex)** — Inicialização apenas local por padrão. [PR #1](https://github.com/openclaw/clawdex/pull/1).
-- 💬 **[Discrawl](https://github.com/openclaw/discrawl)** — Suporte a tokens SecretRef do OpenClaw. [PR #49](https://github.com/openclaw/discrawl/pull/49).
-- 📈 **[b3fileparser](https://github.com/codigoquant/b3fileparser)** — Suporte à leitura de arquivos ZIP além de TXT. [PR #1](https://github.com/codigoquant/b3fileparser/pull/1).
+<!-- CONTRIBUTIONS:START -->
+- **[codigoquant/b3fileparser](https://github.com/codigoquant/b3fileparser)** — [1 PR integrado](https://github.com/codigoquant/b3fileparser/pulls?q=is%3Apr+is%3Amerged+author%3Arteoo)
+- **[openclaw/clawdex](https://github.com/openclaw/clawdex)** — [1 PR integrado](https://github.com/openclaw/clawdex/pulls?q=is%3Apr+is%3Amerged+author%3Arteoo)
+- **[openclaw/discrawl](https://github.com/openclaw/discrawl)** — [1 PR integrado](https://github.com/openclaw/discrawl/pulls?q=is%3Apr+is%3Amerged+author%3Arteoo)
+- **[tobi/disktree](https://github.com/tobi/disktree)** — [1 PR integrado](https://github.com/tobi/disktree/pulls?q=is%3Apr+is%3Amerged+author%3Arteoo)
+<!-- CONTRIBUTIONS:END -->
 
 ## Atividade no GitHub
 
