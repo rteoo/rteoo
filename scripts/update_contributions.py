@@ -1,4 +1,4 @@
-"""Refresh only the marked README sections from public merged upstream PRs."""
+"""Refresh only the marked README sections from public merged PRs."""
 
 from collections import Counter
 from html import escape
@@ -10,7 +10,6 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 AUTHOR = "rteoo"
-EXCLUDED_OWNERS = {AUTHOR, "strateo"}
 START = "<!-- CONTRIBUTIONS:START -->"
 END = "<!-- CONTRIBUTIONS:END -->"
 FILES = {"README.md": "pt", "README.pt-BR.md": "pt", "README.en-US.md": "en"}
@@ -29,7 +28,6 @@ EN_DESCRIPTIONS = {
 def fetch_page(page):
     query = " ".join([
         f"author:{AUTHOR}", "is:pr", "is:merged", "is:public",
-        *(f"-user:{owner}" for owner in sorted(EXCLUDED_OWNERS)),
     ])
     result = subprocess.run(
         ["gh", "api", "--method", "GET", "search/issues", "-f", f"q={query}",
@@ -69,8 +67,6 @@ def collect_contributions(fetch=fetch_page):
                     or "pull_request" not in item or item["state"] != "closed"):
                 raise ValueError("Unexpected result in merged public PR search.")
             owner, name = match.groups()
-            if owner.lower() in EXCLUDED_OWNERS:
-                raise ValueError("Search returned an excluded repository.")
             identity = (owner.lower(), name.lower(), item["number"])
             if identity in seen:
                 raise ValueError("Duplicate PR during pagination; retry the refresh.")

@@ -25,13 +25,17 @@ class ContributionsTest(unittest.TestCase):
         self.assertEqual(collect_contributions(lambda n: pages[n - 1]),
                          Counter({"tobi/disktree": 100, "openclaw/clawdex": 1}))
 
-    def test_rejects_incomplete_truncated_duplicate_and_excluded_results(self):
+    def test_rejects_incomplete_truncated_duplicate_and_partial_results(self):
         cases = [page([item(1)], incomplete=True), page([], 1001),
-                 page([item(1), item(1)]), page([item(1, "rteoo/own")]),
-                 page([item(1, "strateo/own")]), page([], 1)]
+                 page([item(1), item(1)]), page([], 1)]
         for data in cases:
             with self.subTest(data=data), self.assertRaises(ValueError):
                 collect_contributions(lambda n: data)
+
+    def test_includes_personal_strateo_and_upstream_repositories(self):
+        data = page([item(1, "rteoo/sniptype"), item(2, "strateo/nfse"), item(3)])
+        self.assertEqual(collect_contributions(lambda n: data),
+                         Counter({"rteoo/sniptype": 1, "strateo/nfse": 1, "tobi/disktree": 1}))
 
     def test_descriptions_localization_and_safe_markdown(self):
         descriptions = {"tobi/disktree": "A disk usage visualizer.",
