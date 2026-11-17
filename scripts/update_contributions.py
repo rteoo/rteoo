@@ -1,11 +1,11 @@
 """Refresh only the marked README sections from public merged upstream PRs."""
 
 from collections import Counter
+from html import escape
 import json
 from pathlib import Path
 import re
 import subprocess
-from urllib.parse import urlencode
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,6 +14,16 @@ EXCLUDED_OWNERS = {AUTHOR, "strateo"}
 START = "<!-- CONTRIBUTIONS:START -->"
 END = "<!-- CONTRIBUTIONS:END -->"
 FILES = {"README.md": "pt", "README.pt-BR.md": "pt", "README.en-US.md": "en"}
+PT_DESCRIPTIONS = {
+    "tobi/disktree": "Visualizador de uso do disco em mapa de árvore, feito em Rust e GPUI para Omarchy.",
+    "openclaw/clawdex": "Catálogo local de contatos para agentes de IA.",
+    "openclaw/discrawl": "CLI para Discord com armazenamento local em SQLite.",
+    "codigoquant/b3fileparser": "Leitor de arquivos de dados da B3 em Python.",
+}
+EN_DESCRIPTIONS = {
+    "openclaw/clawdex": "A local contact catalog for AI agents.",
+    "codigoquant/b3fileparser": "A Python parser for B3 historical market data files.",
+}
 
 
 def fetch_page(page):
@@ -73,19 +83,35 @@ def collect_contributions(fetch=fetch_page):
     raise ValueError("Could not retrieve all PRs; keeping existing README content.")
 
 
-def render(counts, language):
-    if not counts:
+def fetch_repository(repo):
+    result = subprocess.run(
+        ["gh", "api", f"repos/{repo}"], capture_output=True, text=True,
+        encoding="utf-8", check=False,
+    )
+    if result.returncode:
+        raise RuntimeError(f"Could not fetch public metadata for {repo}.")
+    data = json.loads(result.stdout)
+    if data["private"] or data["full_name"].lower() != repo.lower():
+        raise ValueError(f"Unexpected or non-public repository: {repo}.")
+    return data.get("description")
+
+
+def render(descriptions, language):
+    if not descriptions:
         raise ValueError("No contributions found; refusing to erase the existing list.")
     lines = []
-    for repo, count in sorted(counts.items(), key=lambda pair: (-pair[1], pair[0].lower())):
-        if language == "pt":
-            label = f"{count} PR integrado" if count == 1 else f"{count} PRs integrados"
-        else:
-            label = f"{count} merged PR" if count == 1 else f"{count} merged PRs"
-        url = f"https://github.com/{repo}/pulls?" + urlencode(
-            {"q": f"is:pr is:merged author:{AUTHOR}"}
-        )
-        lines.append(f"- **[{repo}](https://github.com/{repo})** — [{label}]({url})")
+    for repo, description in sorted(descriptions.items(), key=lambda pair: pair[0].lower()):
+        if language == "pt" and repo.lower() in PT_DESCRIPTIONS:
+            description = PT_DESCRIPTIONS[repo.lower()]
+        elif language == "en" and repo.lower() in EN_DESCRIPTIONS:
+            description = EN_DESCRIPTIONS[repo.lower()]
+        if not description:
+            description = "Sem descrição pública." if language == "pt" else "No public description."
+        description = " ".join(description.split())
+        if len(description) > 180:
+            description = description[:177].rsplit(" ", 1)[0] + "…"
+        description = re.sub(r"([\\`*_[\]{}()!|])", r"\\\1", escape(description))
+        lines.append(f"- **[{repo}](https://github.com/{repo})** — {description}")
     return "\n".join(lines)
 
 
@@ -99,14 +125,15 @@ def replace_section(text, body):
     return before + START + "\n" + body + "\n" + END + after
 
 
-def update(root=ROOT, fetch=fetch_page):
+def update(root=ROOT, fetch=fetch_page, fetch_repo=fetch_repository):
     counts = collect_contributions(fetch)
+    descriptions = {repo: fetch_repo(repo) for repo in sorted(counts)}
     planned = []
     # Validate every file before changing any of them.
     for name, language in FILES.items():
         path = root / name
         original = path.read_text(encoding="utf-8")
-        replacement = replace_section(original, render(counts, language))
+        replacement = replace_section(original, render(descriptions, language))
         if original != replacement:
             planned.append((path, replacement))
     for path, replacement in planned:

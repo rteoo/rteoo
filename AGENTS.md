@@ -14,5 +14,5 @@ The user requested automatic updates from merged PRs. The `Update contributions`
 
 - Run `python -B -m unittest discover -s scripts -p 'test_*.py' -v` for updater regression coverage.
 - Run `python -B scripts/update_contributions.py` to refresh locally with the existing authenticated `gh` CLI.
-- Include only merged public upstream PRs by `rteoo`; exclude repositories owned by `rteoo` or `strateo`. Keep project counts and PR search links localized in PT-BR and English.
+- Include only merged public upstream PRs by `rteoo`; exclude repositories owned by `rteoo` or `strateo`. Display repository links and brief descriptions only, without PR counts or citations. Fetch public descriptions automatically; use curated Portuguese descriptions where available and retain the upstream language for new projects until translated.
 - Refuse incomplete, inconsistent, empty, or over-1,000-result searches. Beyond the search ceiling, partition by date before refreshing.

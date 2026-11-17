@@ -33,13 +33,16 @@ class ContributionsTest(unittest.TestCase):
             with self.subTest(data=data), self.assertRaises(ValueError):
                 collect_contributions(lambda n: data)
 
-    def test_localized_counts_and_safe_links(self):
-        counts = Counter({"tobi/disktree": 2, "openclaw/clawdex": 1})
-        self.assertIn("2 PRs integrados", render(counts, "pt"))
-        self.assertIn("1 merged PR", render(counts, "en"))
-        self.assertIn("is%3Amerged+author%3Arteoo", render(counts, "en"))
+    def test_descriptions_localization_and_safe_markdown(self):
+        descriptions = {"tobi/disktree": "A disk usage visualizer.",
+                        "other/project": "A [link](https://example.com)\n<script>"}
+        self.assertIn("Visualizador de uso do disco", render(descriptions, "pt"))
+        self.assertIn("A disk usage visualizer.", render(descriptions, "en"))
+        self.assertIn(r"\[link\]\(https://example.com\) &lt;script&gt;", render(descriptions, "en"))
+        self.assertNotIn("/pulls?", render(descriptions, "en"))
+        self.assertIn("No public description.", render({"other/repo": None}, "en"))
         with self.assertRaises(ValueError):
-            render(Counter(), "en")
+            render({}, "en")
 
     def test_only_marked_content_changes(self):
         text = f"intro\n{START}\nold\n{END}\nfooter"
@@ -56,14 +59,30 @@ class ContributionsTest(unittest.TestCase):
             for name in FILES:
                 (root / name).write_text(original, encoding="utf-8")
             fetch = lambda n: page([item(1)])
-            self.assertEqual(update(root, fetch), 3)
-            self.assertEqual(update(root, fetch), 0)
+            fetch_repo = lambda repo: "A disk usage visualizer."
+            self.assertEqual(update(root, fetch, fetch_repo), 3)
+            self.assertEqual(update(root, fetch, fetch_repo), 0)
             for name in FILES:
                 (root / name).write_text(original, encoding="utf-8")
             (root / "README.en-US.md").write_text("no markers", encoding="utf-8")
             with self.assertRaises(ValueError):
-                update(root, fetch)
+                update(root, fetch, fetch_repo)
             self.assertEqual((root / "README.md").read_text(encoding="utf-8"), original)
+
+    def test_metadata_failure_preserves_all_files(self):
+        with tempfile.TemporaryDirectory(prefix="profile-contributions-") as scratch:
+            root = Path(scratch)
+            original = f"{START}\nexisting\n{END}\n"
+            for name in FILES:
+                (root / name).write_text(original, encoding="utf-8")
+
+            def failed_metadata(repo):
+                raise RuntimeError("Metadata unavailable")
+
+            with self.assertRaises(RuntimeError):
+                update(root, lambda n: page([item(1)]), failed_metadata)
+            for name in FILES:
+                self.assertEqual((root / name).read_text(encoding="utf-8"), original)
 
 
 if __name__ == "__main__":

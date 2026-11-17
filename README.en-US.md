@@ -42,10 +42,10 @@ Small clients for getting official data into scripts and applications.
 ## Contributions
 
 <!-- CONTRIBUTIONS:START -->
-- **[codigoquant/b3fileparser](https://github.com/codigoquant/b3fileparser)** — [1 merged PR](https://github.com/codigoquant/b3fileparser/pulls?q=is%3Apr+is%3Amerged+author%3Arteoo)
-- **[openclaw/clawdex](https://github.com/openclaw/clawdex)** — [1 merged PR](https://github.com/openclaw/clawdex/pulls?q=is%3Apr+is%3Amerged+author%3Arteoo)
-- **[openclaw/discrawl](https://github.com/openclaw/discrawl)** — [1 merged PR](https://github.com/openclaw/discrawl/pulls?q=is%3Apr+is%3Amerged+author%3Arteoo)
-- **[tobi/disktree](https://github.com/tobi/disktree)** — [1 merged PR](https://github.com/tobi/disktree/pulls?q=is%3Apr+is%3Amerged+author%3Arteoo)
+- **[codigoquant/b3fileparser](https://github.com/codigoquant/b3fileparser)** — A Python parser for B3 historical market data files.
+- **[openclaw/clawdex](https://github.com/openclaw/clawdex)** — A local contact catalog for AI agents.
+- **[openclaw/discrawl](https://github.com/openclaw/discrawl)** — cli for Discord with sqlite backend
+- **[tobi/disktree](https://github.com/tobi/disktree)** — A treemap for finding and removing what fills your disk, for Omarchy. Rust + GPUI.
 <!-- CONTRIBUTIONS:END -->
 
 ## GitHub activity

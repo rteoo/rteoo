@@ -42,10 +42,10 @@ Bibliotecas pequenas para levar dados oficiais aos seus scripts e aplicativos.
 ## Contribuições
 
 <!-- CONTRIBUTIONS:START -->
-- **[codigoquant/b3fileparser](https://github.com/codigoquant/b3fileparser)** — [1 PR integrado](https://github.com/codigoquant/b3fileparser/pulls?q=is%3Apr+is%3Amerged+author%3Arteoo)
-- **[openclaw/clawdex](https://github.com/openclaw/clawdex)** — [1 PR integrado](https://github.com/openclaw/clawdex/pulls?q=is%3Apr+is%3Amerged+author%3Arteoo)
-- **[openclaw/discrawl](https://github.com/openclaw/discrawl)** — [1 PR integrado](https://github.com/openclaw/discrawl/pulls?q=is%3Apr+is%3Amerged+author%3Arteoo)
-- **[tobi/disktree](https://github.com/tobi/disktree)** — [1 PR integrado](https://github.com/tobi/disktree/pulls?q=is%3Apr+is%3Amerged+author%3Arteoo)
+- **[codigoquant/b3fileparser](https://github.com/codigoquant/b3fileparser)** — Leitor de arquivos de dados da B3 em Python.
+- **[openclaw/clawdex](https://github.com/openclaw/clawdex)** — Catálogo local de contatos para agentes de IA.
+- **[openclaw/discrawl](https://github.com/openclaw/discrawl)** — CLI para Discord com armazenamento local em SQLite.
+- **[tobi/disktree](https://github.com/tobi/disktree)** — Visualizador de uso do disco em mapa de árvore, feito em Rust e GPUI para Omarchy.
 <!-- CONTRIBUTIONS:END -->
 
 ## Atividade no GitHub
