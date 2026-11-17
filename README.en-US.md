@@ -2,7 +2,7 @@
 
 # Hi, I'm Teô 👋
 
-🇧🇷 Engineer at **Strateo**. I build tools for work I do every day: typing, recording, working with data, and automating the repetitive bits.
+🇧🇷 Engineer at **[Strateo](https://github.com/strateo)**. I build tools for work I do every day: typing, recording, working with data, and automating the repetitive bits.
 
 Most of my public projects are Windows desktop apps and Python libraries. I like tools that keep data local and make useful things easy to script.
 
