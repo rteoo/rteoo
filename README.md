@@ -39,6 +39,13 @@ Bibliotecas pequenas para levar dados oficiais aos seus scripts e aplicativos.
 - 🧮 **[rpn-calc](https://github.com/rteoo/rpn-calc)** — Uma calculadora RPN.
 - 🎨 **[design-system-t3code](https://github.com/rteoo/design-system-t3code)** — Um design system baseado no tema padrão do aplicativo T3 Code. Sem vínculo com o T3 Code.
 
+## Contribuições
+
+- 💽 **[DiskTree](https://github.com/tobi/disktree)** — Inclusão do ícone no executável para Windows. [PR #37](https://github.com/tobi/disktree/pull/37).
+- 🗂️ **[Clawdex](https://github.com/openclaw/clawdex)** — Inicialização apenas local por padrão. [PR #1](https://github.com/openclaw/clawdex/pull/1).
+- 💬 **[Discrawl](https://github.com/openclaw/discrawl)** — Suporte a tokens SecretRef do OpenClaw. [PR #49](https://github.com/openclaw/discrawl/pull/49).
+- 📈 **[b3fileparser](https://github.com/codigoquant/b3fileparser)** — Suporte à leitura de arquivos ZIP além de TXT. [PR #1](https://github.com/codigoquant/b3fileparser/pull/1).
+
 ## Atividade no GitHub
 
 [![Gráfico de contribuições no GitHub de rteoo](https://gitlyy.vercel.app/api/contribution?username=rteoo&hide_border=true)](https://github.com/rteoo?tab=overview)

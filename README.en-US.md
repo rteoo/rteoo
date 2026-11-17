@@ -39,6 +39,13 @@ Small clients for getting official data into scripts and applications.
 - 🧮 **[rpn-calc](https://github.com/rteoo/rpn-calc)** — An RPN calculator.
 - 🎨 **[design-system-t3code](https://github.com/rteoo/design-system-t3code)** — A design system based on the T3 Code app's default theme. Unaffiliated with T3 Code.
 
+## Contributions
+
+- 💽 **[DiskTree](https://github.com/tobi/disktree)** — Embed the application icon in the Windows executable. [PR #37](https://github.com/tobi/disktree/pull/37).
+- 🗂️ **[Clawdex](https://github.com/openclaw/clawdex)** — Keep initialization local-only by default. [PR #1](https://github.com/openclaw/clawdex/pull/1).
+- 💬 **[Discrawl](https://github.com/openclaw/discrawl)** — Support OpenClaw SecretRef tokens. [PR #49](https://github.com/openclaw/discrawl/pull/49).
+- 📈 **[b3fileparser](https://github.com/codigoquant/b3fileparser)** — Support reading ZIP files alongside TXT files. [PR #1](https://github.com/codigoquant/b3fileparser/pull/1).
+
 ## GitHub activity
 
 [![GitHub contribution graph for rteoo](https://gitlyy.vercel.app/api/contribution?username=rteoo&hide_border=true)](https://github.com/rteoo?tab=overview)
