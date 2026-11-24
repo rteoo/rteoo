@@ -8,11 +8,11 @@ I build tools for work I do every day: typing, recording, working with data, and
 Most of my public projects are Windows desktop apps and Python libraries.
 I like tools that keep data local and make useful things easy to script.
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-663399?style=flat-square&logo=css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 
 ## Desktop apps
 
@@ -35,10 +35,7 @@ Small clients for getting data or automation into scripts and applications. All 
 
 - 🧾 **[strateo/nfse](https://github.com/strateo/nfse)** — A Python client for issuing, querying, and canceling Brazilian service invoices (NFS-e) through the national standard's API.
 - 📬 **[outlook-pst](https://github.com/rteoo/outlook-pst)** — A Python CLI and plugin for ChatGPT and Claude. Search and write emails in local files in Classic Outlook.
-- 🐂 **[cattle-auction](https://github.com/rteoo/cattle-auction)** — Turn Brazilian cattle-auction videos into structured lot data using transcription, OCR, and LLMs.
-- 🎨 **[design-system-t3code](https://github.com/rteoo/design-system-t3code)** — A design system based on the T3 Code app's default theme. Unaffiliated with T3 Code.
 - 🔊 **[rteoo/audio-tray](https://github.com/rteoo/audio-tray)** — A fork of *[tobi/AudioPriorityBar](https://github.com/tobi/AudioPriorityBar)*: a Windows system tray app for managing audio device priorities.
-
 
 ## Contributions
 
