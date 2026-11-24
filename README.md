@@ -8,11 +8,11 @@ Crio ferramentas para o trabalho do dia a dia: digitar, gravar, trabalhar com da
 A maioria dos meus projetos públicos são aplicativos para Windows e bibliotecas Python. 
 Ferramentas que priorizam a privacidade mantendo os dados locais e usando modelos LLM locais e facilitam a automação com scripts.
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-663399?style=flat-square&logo=css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 
 ## Apps Desktop
 
@@ -35,8 +35,6 @@ Bibliotecas pequenas para levar dados ou automações aos seus scripts e aplicat
 
 - 🧾 **[strateo/nfse](https://github.com/strateo/nfse)** — Cliente Python para emissão, consulta e cancelamento de NFS-e no Padrão Nacional via API.
 - 📬 **[outlook-pst](https://github.com/rteoo/outlook-pst)** — CLI em Python e Plugin para ChatGPT e Claude. Pesquise e escreva e-mails no Outlook Clássico.
-- 🐂 **[cattle-auction](https://github.com/rteoo/cattle-auction)** — Transforme vídeos de leilões de gado brasileiros em dados estruturados de lotes usando transcrição, OCR e LLMs.
-- 🎨 **[design-system-t3code](https://github.com/rteoo/design-system-t3code)** — Um design system baseado no tema padrão do aplicativo T3 Code. Sem vínculo com o T3 Code.
 - 🔊 **[rteoo/audio-tray](https://github.com/rteoo/audio-tray)** — Fork from: *[tobi/AudioPriorityBar](https://github.com/tobi/AudioPriorityBar)*, Windows version for system tray app for managing audio device priorities.
 
 ## Contribuições
